@@ -209,7 +209,6 @@ def main(args):
         logging_steps=25,
         load_best_model_at_end=True,
         push_to_hub=True,
-        fp16=True,
         seed=_SEED,
     )
     # wandb.config.update(training_args, allow_val_change=True)

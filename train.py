@@ -15,7 +15,7 @@ import torch
 import torch.nn as nn
 import torchvision
 from imgaug import augmenters as iaa
-from .model import BeitForDepthEstimation
+from model import BeitForDepthEstimation
 from transformers import (
     GLPNFeatureExtractor,
     GLPNForDepthEstimation,

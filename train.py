@@ -121,7 +121,7 @@ def init_weights(model):
 
 def main(args):
     print(f"Initializing model and feature extractor with {args.model_ckpt}...")
-    feature_extractor = GLPNFeatureExtractor.from_pretrained(args.model_ckpt)
+    # feature_extractor = GLPNFeatureExtractor.from_pretrained(args.model_ckpt)
     model = BeitForDepthEstimation.from_pretrained(args.model_ckpt)
     # init_fn = init_weights(model)
 
@@ -219,7 +219,7 @@ def main(args):
         training_args,
         train_dataset=train_dataset,
         eval_dataset=validation_dataset,
-        tokenizer=feature_extractor,
+        # tokenizer=feature_extractor,
         compute_metrics=errors,
         data_collator=collate_fn,
     )
